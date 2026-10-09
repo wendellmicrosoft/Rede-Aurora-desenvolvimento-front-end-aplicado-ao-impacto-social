@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cadastro da Rede Aurora para voluntarios, doadores e apoiadores acompanharem projetos sociais.">
+    <meta name="keywords" content="cadastro ONG, voluntario, doador, formulario HTML5, acessibilidade">
+    <meta name="author" content="Rede Aurora">
+    <meta property="og:title" content="Cadastro | Rede Aurora">
+    <meta property="og:description" content="Preencha seu cadastro para participar como voluntario, doador ou apoiador.">
+    <meta property="og:type" content="website">
+    <title>Rede Aurora | Cadastro</title>
+    <link rel="icon" href="assets/img/logo-rede-aurora.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteudo principal</a>
+    <header class="site-header" data-header>
+      <nav class="nav-shell" aria-label="Navegacao principal">
+        <a class="brand" href="index.html" aria-label="Rede Aurora - pagina inicial">
+          <img src="assets/img/logo-rede-aurora.svg" width="220" height="64" alt="Rede Aurora">
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-toggle>
+          <span class="menu-icon" aria-hidden="true"></span>
+          <span class="sr-only">Abrir menu</span>
+        </button>
+        <ul class="nav-menu" id="menu-principal" data-menu>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a aria-current="page" href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero section-band form-intro">
+        <div>
+          <p class="eyebrow">Faca parte da Rede Aurora</p>
+          <h1>Seu proximo passo comeca aqui</h1>
+          <p>Conte um pouco sobre voce e como gostaria de participar. Cada pessoa traz algo que faz a diferenca.</p>
+        </div>
+        <img src="assets/img/projeto-mutirao-cuidado.png" width="1536" height="864" alt="Equipe voluntaria organizando doacoes para uma campanha social">
+      </section>
+
+      <section class="section-wrap" aria-labelledby="formulario-titulo">
+        <div class="section-heading">
+          <p class="eyebrow">Vamos nos conhecer</p>
+          <h2 id="formulario-titulo">Informacoes cadastrais</h2>
+          <p>Preencha seus dados e escolha suas areas de interesse.</p>
+        </div>
+
+        <form class="registration-form" action="#" method="post" data-registration novalidate>
+          <fieldset>
+            <legend>Perfil de participacao</legend>
+            <div class="radio-grid">
+              <label><input type="radio" name="perfil" value="voluntario" required> Voluntario</label>
+              <label><input type="radio" name="perfil" value="doador"> Doador/apoiador</label>
+              <label><input type="radio" name="perfil" value="visitante"> Visitante</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Dados pessoais</legend>
+            <div class="form-grid">
+              <label>Nome completo
+                <input id="nome" name="nome" type="text" autocomplete="name" minlength="8" maxlength="90" required placeholder="Maria Silva Santos">
+              </label>
+              <label>E-mail
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="maria@email.com">
+              </label>
+              <label>CPF
+                <input id="cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required placeholder="000.000.000-00" data-mask="cpf">
+              </label>
+              <label>Telefone
+                <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" pattern="\(\d{2}\) \d{4,5}-\d{4}" maxlength="15" required placeholder="(11) 99999-9999" data-mask="phone">
+              </label>
+              <label>Data de nascimento
+                <input id="nascimento" name="nascimento" type="date" required min="1900-01-01" max="2018-12-31">
+              </label>
+              <label>Disponibilidade
+                <select id="disponibilidade" name="disponibilidade" required>
+                  <option value="">Selecione</option>
+                  <option>Manhas durante a semana</option>
+                  <option>Tardes durante a semana</option>
+                  <option>Noites durante a semana</option>
+                  <option>Finais de semana</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereco</legend>
+            <div class="form-grid">
+              <label>CEP
+                <input id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" pattern="\d{5}-\d{3}" maxlength="9" required placeholder="00000-000" data-mask="cep">
+              </label>
+              <label>Endereco
+                <input id="endereco" name="endereco" type="text" autocomplete="address-line1" minlength="5" maxlength="120" required placeholder="Rua, avenida ou travessa">
+              </label>
+              <label>Cidade
+                <input id="cidade" name="cidade" type="text" autocomplete="address-level2" minlength="2" maxlength="60" required placeholder="Sao Paulo">
+              </label>
+              <label>Estado
+                <select id="estado" name="estado" autocomplete="address-level1" required>
+                  <option value="">UF</option>
+                  <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferencias de engajamento</legend>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="interesse_educacao" value="educacao"> Educacao</label>
+              <label><input type="checkbox" name="interesse_alimentacao" value="alimentacao"> Seguranca alimentar</label>
+              <label><input type="checkbox" name="interesse_meio_ambiente" value="meio-ambiente"> Meio ambiente</label>
+              <label><input type="checkbox" name="interesse_transparencia" value="transparencia"> Transparencia e comunicacao</label>
+            </div>
+            <label>Mensagem opcional
+              <textarea id="mensagem" name="mensagem" rows="5" maxlength="500" placeholder="Conte como voce gostaria de participar"></textarea>
+            </label>
+          </fieldset>
+
+          <label class="terms">
+            <input type="checkbox" name="termos" required>
+            Li e concordo com o uso dos dados para contato, gestao de voluntariado e envio de relatorios de transparencia.
+          </label>
+
+          <div class="form-actions">
+            <button class="button primary" type="submit">Enviar cadastro</button>
+            <button class="button secondary" type="reset">Limpar</button>
+          </div>
+          <p class="form-feedback" role="status" data-form-feedback></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Rede Aurora</strong>
+        <p>Cadastro seguro com validacao no navegador.</p>
+      </div>
+      <a class="button secondary light" href="projetos.html">Voltar aos projetos</a>
+    </footer>
+  </body>
+</html>

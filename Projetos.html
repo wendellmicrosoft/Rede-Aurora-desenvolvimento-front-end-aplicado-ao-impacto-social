@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Projetos sociais da Rede Aurora, oportunidades de voluntariado e campanhas de doacao com metas transparentes.">
+    <meta name="keywords" content="projetos sociais, voluntariado, doar, campanha, ONG">
+    <meta name="author" content="Rede Aurora">
+    <meta property="og:title" content="Projetos sociais | Rede Aurora">
+    <meta property="og:description" content="Escolha uma iniciativa, candidate-se como voluntario ou apoie uma campanha.">
+    <meta property="og:type" content="website">
+    <title>Rede Aurora | Projetos sociais</title>
+    <link rel="icon" href="assets/img/logo-rede-aurora.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteudo principal</a>
+    <header class="site-header" data-header>
+      <nav class="nav-shell" aria-label="Navegacao principal">
+        <a class="brand" href="index.html" aria-label="Rede Aurora - pagina inicial">
+          <img src="assets/img/logo-rede-aurora.svg" width="220" height="64" alt="Rede Aurora">
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-toggle>
+          <span class="menu-icon" aria-hidden="true"></span>
+          <span class="sr-only">Abrir menu</span>
+        </button>
+        <ul class="nav-menu" id="menu-principal" data-menu>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a aria-current="page" href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero section-band">
+        <div>
+          <p class="eyebrow">Projetos, voluntariado e doacoes</p>
+          <h1>Projetos que aproximam pessoas</h1>
+          <p>Doe seu tempo, apoie uma campanha ou conheca o que estamos construindo com a comunidade.</p>
+        </div>
+      </section>
+
+      <section class="section-wrap" aria-labelledby="lista-projetos">
+        <div class="section-heading">
+          <p class="eyebrow">Nossas causas</p>
+          <h2 id="lista-projetos">Iniciativas em andamento</h2>
+          <p>Acompanhe as campanhas e encontre sua forma de participar.</p>
+        </div>
+        <div class="project-toolbar">
+          <label>Area de atuacao
+            <select id="categoria" data-project-filter>
+              <option value="todos">Todas as iniciativas</option>
+              <option value="educacao">Alimentacao e meio ambiente</option>
+              <option value="voluntariado">Mobilizacao comunitaria</option>
+              <option value="transparencia">Transparencia</option>
+            </select>
+          </label>
+          <p role="status" data-filter-feedback>3 iniciativas em andamento</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-category="educacao">
+            <img src="assets/img/projeto-horta-escola.png" width="1536" height="864" loading="lazy" alt="Voluntarios e criancas plantando mudas em uma horta comunitaria urbana">
+            <div class="project-body">
+              <p class="tag">Meio ambiente e alimentacao</p>
+              <h3>Horta Escola Aurora</h3>
+              <p>Oficinas de cultivo urbano para criancas, familias e merendeiras, com alimentos destinados a cozinhas comunitarias.</p>
+              <div class="progress-block">
+                <span>R$ 38.400 de R$ 60.000</span>
+                <progress value="38400" max="60000">64%</progress>
+              </div>
+              <a class="text-link" href="cadastro.html?perfil=voluntario">Quero ser voluntario</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="voluntariado">
+            <img src="assets/img/projeto-mutirao-cuidado.png" width="1536" height="864" loading="lazy" alt="Voluntarios organizando alimentos e kits de higiene em caixas de doacao">
+            <div class="project-body">
+              <p class="tag">Mobilizacao comunitaria</p>
+              <h3>Mutirao do Cuidado</h3>
+              <p>Rede de distribuicao de cestas, kits de higiene e apoio familiar com triagem, logistica e acompanhamento social.</p>
+              <div class="progress-block">
+                <span>R$ 72.900 de R$ 90.000</span>
+                <progress value="72900" max="90000">81%</progress>
+              </div>
+              <a class="text-link" href="cadastro.html?perfil=doador">Apoiar campanha</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="transparencia">
+            <img src="assets/img/projeto-observatorio-impacto.png" width="1536" height="864" loading="lazy" alt="Pessoas analisando graficos, relatorios e indicadores de transparencia social">
+            <div class="project-body">
+              <p class="tag">Transparencia</p>
+              <h3>Observatorio de Impacto</h3>
+              <p>Publicacao de relatorios, indicadores sociais, documentos financeiros e historias de beneficiarios com linguagem acessivel.</p>
+              <div class="progress-block">
+                <span>R$ 24.600 de R$ 40.000</span>
+                <progress value="24600" max="40000">61%</progress>
+              </div>
+              <a class="text-link" href="#transparencia">Ver documentos</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band donation-panel" aria-labelledby="doacao-titulo">
+        <div>
+          <p class="eyebrow">Captacao de recursos</p>
+          <h2 id="doacao-titulo">Simulador de doacao</h2>
+          <p>Veja o que a sua contribuicao pode ajudar a realizar. Os valores sao estimativas; este simulador nao realiza cobrancas.</p>
+        </div>
+        <div class="donation-form" data-donation-form>
+          <label for="valor-doacao">Valor da doacao</label>
+          <input id="valor-doacao" name="valor" type="range" min="20" max="500" step="10" value="120" data-donation-range>
+          <output for="valor-doacao" data-donation-output>R$ 120</output>
+          <p role="status" data-impact-output>Ajuda a oferecer 12 refeicoes ou 4 horas de oficina.</p>
+          <a class="button primary" href="cadastro.html?perfil=doador">Continuar como doador</a>
+        </div>
+      </section>
+
+      <section class="section-wrap split" id="transparencia" aria-labelledby="docs-titulo">
+        <div>
+          <p class="eyebrow">Comunicacao e transparencia</p>
+          <h2 id="docs-titulo">Documentos publicos</h2>
+          <p>Relatorios, notas de imprensa e materiais institucionais ficam reunidos em uma central aberta para visitantes, apoiadores e orgaos parceiros.</p>
+        </div>
+        <ul class="document-list" aria-label="Lista de documentos">
+          <li><a href="#" aria-label="Relatorio anual de impacto, arquivo demonstrativo">Relatorio anual de impacto 2026</a><span>PDF</span></li>
+          <li><a href="#" aria-label="Prestacao de contas trimestral, arquivo demonstrativo">Prestacao de contas trimestral</a><span>PDF</span></li>
+          <li><a href="#" aria-label="Release para imprensa, arquivo demonstrativo">Release para imprensa</a><span>DOC</span></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Rede Aurora</strong>
+        <p>Projetos sociais com metas claras e acompanhamento publico.</p>
+      </div>
+      <a class="button secondary light" href="cadastro.html">Cadastrar interesse</a>
+    </footer>
+  </body>
+</html>
